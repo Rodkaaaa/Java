@@ -16,10 +16,10 @@ public class Main{
         area(num1);
     }
     public static void perimetro(Double num1) {
-        System.out.println(Math.PI * Math.pow((num1/2), 2));
+        System.out.println(Math.round(Math.PI * Math.pow((num1/2), 2)));
     }
 
     public static void area(Double num1) {
-        System.out.println("el Area es : " + (Math.PI * Math.pow(num1, 2)) / 4);
+        System.out.println("el Area es : " +  Math.round(Math.PI * Math.pow(num1, 2)) / 4);
     }
 }
