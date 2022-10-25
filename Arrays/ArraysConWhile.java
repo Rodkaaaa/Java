@@ -3,7 +3,7 @@ package Arrays;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ArraysConFor {
+public class ArraysConWhile {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);System.out.println("Ingrese cantidad de tickets \n");
         int tickets = sc.nextInt();
