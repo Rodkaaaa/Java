@@ -27,13 +27,14 @@ public class Main extends OPersona{
             i++;
         }
         int[] numArray = {9,8,7,6,5,4,3,2,1};
-        for (int j : numArray) {
+        for (int j : numArray) { //foreach
             System.out.println(j);
         } 
         String[] strArray = {"a","b","c","e","r","e","s","f","2"};
         for (String string : strArray) {
             System.out.println(string);
         }
+        
         suma(8,8);
         sumaStr("Frederick", "Cid");
         int resultado = sumRe(5);
@@ -43,6 +44,7 @@ public class Main extends OPersona{
         console.printf(alt + " de Bolean a int", args);
         String numerosStr = "123";
         Integer.parseInt(numerosStr);
+
     }
     public static void suma(int num1, int num2){
         System.out.println((num1+num2)); 
@@ -51,7 +53,7 @@ public class Main extends OPersona{
         System.out.println(a + " " + b);
     }
     
-    public static int sumRe(int num){
+public static int sumRe(int num){
         if (num == 1) {
             return 1;
         } else {

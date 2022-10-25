@@ -1,19 +1,15 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-/* Age range	Ticket Price
-Normal ticket	7 Euros
-Below 5	60% Discount
-Over 60	55% Discount */
-public class EjercicioGit {
+public class Fortickets {
     public static void main(String[] args) {
+        double entrada = 0, suma = 0;
         Scanner sc = new Scanner(System.in);
-        int count = 1;
-        int suma = 0;
-        double entrada = 0;
         DecimalFormat df = new DecimalFormat("#.00");
-        while (true) {
-            System.out.println("Ingrese la edad del cliente N: " + count + " o ingrese 0 para salir");
+        System.out.println("ingrese cantidad de tickets a comprar");
+        int repeticiones = sc.nextInt();
+        for (int i = 0; i < repeticiones; i++) {
+            System.out.println("Ingrese la edad del cliente N: " + (i+1));
             int edad = sc.nextInt();
             if (edad < 5 && edad > 0) {
                 entrada = 7 * 0.4;
@@ -23,18 +19,14 @@ public class EjercicioGit {
                 entrada = 7 * 0.45;
                 System.out.println("El valor de la entrada es: $" + df.format(entrada));
                 suma += entrada;
-
-            } else if (edad == 0) {
-                break;
             } else {
                 entrada = 7;
                 System.out.println("El valor de la entrada es: $" + entrada);
                 suma += entrada;
             }
-            count++;
         }
-        System.out.println("El total de costo de la entrada es $" + suma);
+        System.out.println("total a pagar es: $"+ df.format(suma));
+        
     }
+
 }
-
-
