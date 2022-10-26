@@ -6,7 +6,7 @@ import java.util.Scanner;
 import javax.xml.transform.Source;
 
 public class DesafioAlumnos {
-/*vamos a pedirle al usuario la cantidad de alunos que va a ingresar 
+/*vamos a pedirle al usuario la cantidad de alumnos que va a ingresar 
 pedir por cada alumno el nombre y que ingrese 3 notas por alumno 
 (guardar en arrayList)
 estos valores se van aguardar en un hashMap en donde la 
@@ -58,5 +58,8 @@ llave será el nombre del alumno y el valor será el arreglo con sus 3 notas*/
             System.out.println("El promedio de "+ i +", es: " + (df.format(suma/resultado.get(i).size())));
             System.out.println("*****************************************************");
         }
+        System.out.println("*****************************************************");
+        System.out.println("                 Fin de la ejecución                 ");
+        System.out.println("*****************************************************");
     }
 }
