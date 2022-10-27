@@ -11,7 +11,7 @@ public class BuclesEjercicios {
         while (tickets > contador) {
 
             contador++;
-            System.out.println("Ingrese edad /n");
+            System.out.println("Ingrese edad \n");
             int edad = sc.nextInt();
             float precio = 7;
             if (edad < 5) {

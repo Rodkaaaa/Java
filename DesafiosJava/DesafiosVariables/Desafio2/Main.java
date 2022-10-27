@@ -1,3 +1,4 @@
+package DesafiosJava.DesafiosVariables.Desafio2;
 import java.util.Scanner;
 
 public class Main{

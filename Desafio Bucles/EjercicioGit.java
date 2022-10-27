@@ -12,6 +12,9 @@ public class EjercicioGit {
         int suma = 0;
         double entrada = 0;
         DecimalFormat df = new DecimalFormat("#.00");
+        //while true es un bucle infinito el cual se detiene con un break
+        //es importante agregar un break en alguna condicion en el caso de no hacerlo se repitira infinitamente
+        //es muy util para validar datos y repetir cierta parte para que el usuario ingrese un dato deseado
         while (true) {
             System.out.println("Ingrese la edad del cliente N: " + count + " o ingrese 0 para salir");
             int edad = sc.nextInt();
@@ -25,12 +28,15 @@ public class EjercicioGit {
                 suma += entrada;
 
             } else if (edad == 0) {
+                //aca agrego el break para romper el bucle
                 break;
             } else {
                 entrada = 7;
                 System.out.println("El valor de la entrada es: $" + entrada);
+                //esto seria igual a "suma = suma + entradas"
                 suma += entrada;
             }
+            //esto seria igual a "count = count + 1"
             count++;
         }
         System.out.println("El total de costo de la entrada es $" + suma);

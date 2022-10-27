@@ -1,3 +1,6 @@
+//borrar este package esta echo de mi pc
+package DesafiosJava.DesafiosVariables.Desafio3;
+
 import java.util.Scanner;
 
 public class conversorPeso{
@@ -24,10 +27,14 @@ El peso ingresado en la luna sería de: 8.27 */
         System.out.println("2) Marte");
         System.out.println("3) Tierra");
         System.out.println("******************************");
+        //opc es la opcion que lanzaremos en el switch el cual nos hara poder elegir la opcion que queremos
+        //opc puede ser cualquier tipo de dato solo buscar la manera mas facil de hacer las selecciones
         int opc = sc.nextInt();
         
+        //switch primera parte se absorbe el tipo de dato que necesitamos comparar
         switch(opc){
-            case 1 :
+            case 1 : // case es como el primer if luego se agrega el dato a comprar en este caso es el 1
+            //esto seria asi "opc == 1"
                 //opción para luna
                 System.out.println("******************************");
                 System.out.println("Su peso en la luna sera: " + Math.round(peso*0.165) + "kg");
@@ -45,7 +52,7 @@ El peso ingresado en la luna sería de: 8.27 */
                 System.out.println("Su peso en la marte sera: " + Math.round(peso) + "kg");
                 System.out.println("******************************");
                 break;
-            default:
+            default:// default se ejecuanta cuando la variable no puede ser comparada con nningun case, es el else si lo comparamos
                 // opcion en caso que no agregue una opción valida
                 System.out.println("******************************");
                 System.out.println("Ingrese una opción valida");
