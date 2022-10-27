@@ -17,10 +17,10 @@ System.out.println("Bienvenido, usted podrá calcular el área y el perímetro d
 Console leer = System.console();
 String diametro = leer.readLine();
 int diametro_nuevo = Integer.parseInt(diametro);
-double radio = Integer.parseInt(diametro_nuevo/2);
+double radio = Integer.parseInt(diametro, diametro_nuevo/2);
 
 double pi = 3.1416;
-Double alCuadrado = Math.pow((diametro_nuevo));
+Double alCuadrado = Math.pow((diametro_nuevo,2));
 
 double area = (pi * alCuadrado); 
 int perimeter = (int) (pi* diametro_nuevo);

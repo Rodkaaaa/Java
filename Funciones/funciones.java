@@ -7,7 +7,7 @@ public class funciones {
         
     }
     //funcion int
-    static int suma(int a, int b){
+    static int a(int a, int b){
         return a+b;
     }
     //funcion String
