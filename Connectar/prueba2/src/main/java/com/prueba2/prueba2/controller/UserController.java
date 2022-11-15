@@ -53,8 +53,37 @@ public class UserController   {
     }
 
     //localhost:8080/FindUser/1
-    @PostMapping("/FindUser/{id}")
+    @GetMapping("/FindUser/{id}")
     public User findUser(@PathVariable("id") int id){
         return userService.getUser(id);
+    }
+
+    @GetMapping("/addUser/{id}/{nombre}/{apellido}")
+    public List<User> addUser(@PathVariable("id") int id, @PathVariable("nombre") String nombre, @PathVariable String apellido){
+        userService.add(new User(id,nombre,apellido));
+        return userService.getAll();
+    }
+
+    @GetMapping("/removeUser/{id}/{nombre}/{apellido}")
+    public List<User> removreUser(@PathVariable("id") int id, @PathVariable("nombre") String nombre, @PathVariable String apellido){
+        userService.remove(new User(id,nombre,apellido));
+        return userService.getAll();
+    }
+
+    @GetMapping("/CountUser")
+    public int count(){
+        return userService.size();
+    }
+
+    @GetMapping("/AgregarMap/{num}/{id}/{nombre}/{apellido}")
+    public Map<Integer, User> agregarMap(@PathVariable("num") int num ,@PathVariable("id") int id, @PathVariable("nombre") String nombre, @PathVariable String apellido){
+        userServiceHashmap.addMap(num, new User(id,nombre,apellido));
+        return userServiceHashmap.getAllMap();
+    }
+
+    @GetMapping("/BorrarMap/{num}")
+    public Map<Integer, User> borrarMap(@PathVariable("num") int num){
+        userServiceHashmap.removeMap(num);
+        return userServiceHashmap.getAllMap();
     }
 }
