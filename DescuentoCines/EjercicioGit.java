@@ -7,15 +7,15 @@ Below 5	60% Discount
 Over 60	55% Discount */
 public class EjercicioGit{
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int count = 1;
         int suma = 0;
         double entrada = 0;
         DecimalFormat df = new DecimalFormat("#.00");
-        while(true){
+        while(true){ // no se puede util;izar el switch
             System.out.println("Ingrese la edad del cliente N: "+ count+ " o ingrese 0 para salir");
-            int edad = sc.nextInt();
-            if(edad<5 && edad>0){
+            int edad = scanner.nextInt();// console.readLine()
+            if(edad<=5 && edad>0){
                 entrada = 7*0.4;
                 System.out.println("El valor de la entrada es: $"+ df.format(entrada));
                 suma += entrada;
@@ -34,6 +34,6 @@ public class EjercicioGit{
             }
             count++;
         }
-        System.out.println("El total de costo de la entrada es $"+ suma);
+        System.out.println("El total de costo de la entrada es $"+ df.format(suma));
     }
 }

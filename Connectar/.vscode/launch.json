@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Prueba2Application<prueba2>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.prueba2.prueba2.Prueba2Application",
+            "projectName": "prueba2",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Prueba2Application<firstproyect>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.prueba2.prueba2.Prueba2Application",
+            "projectName": "firstproyect",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
