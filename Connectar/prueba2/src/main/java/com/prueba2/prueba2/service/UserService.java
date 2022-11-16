@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.prueba2.prueba2.model.User;
-
+//funciones sin fincionalidad
 public interface UserService {
     // esta funcion traera Todos los usuarios que tenga
     List<User> getAll();

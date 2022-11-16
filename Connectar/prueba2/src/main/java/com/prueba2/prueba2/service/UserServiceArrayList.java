@@ -15,20 +15,26 @@ import com.prueba2.prueba2.model.User;
 @Service
 public class UserServiceArrayList implements UserService {
     private Map <Integer, User> userMap = new HashMap<>();
+    //crear lista vacia
     private List <User> userList = new ArrayList<>();
+    //user (id = 1 , nombre = nombre, = apellido = apellido) = un dato tipo object
+    // tipo objeto n 0 = 1,frederick,cid
+    // tipo objeto n 1 = 2, javier , sepulveda
 
     public UserServiceArrayList(){
 
     }
-
+    //funcionalidad a metodo
     @Override
     public List<User> getAll(){
         return userList;
+         // tipo objeto n 0 = 1,frederick,cid
+         // tipo objeto n 1 = 2, javier , sepulveda
     }
 
     @Override
-    public void add(User user){
-        userList.add(user);
+    public void add(User user /* nombre del objeto */){
+        userList.add(user);// new User(id:1,nombre:frederick,Apellido:cid)
     }
 
     @Override

@@ -14,9 +14,9 @@ import com.prueba2.prueba2.service.UserServiceHashmap;
 
 @RestController
 public class UserController   {
-    public UserService userService;
+    public UserService userService /* <-nombre de clase */;// invocar Clsee
     public UserServiceHashmap userServiceHashmap;
-
+    //funcionalida interna
     public UserController(@Autowired UserService userService, UserServiceHashmap userServiceHashmap){
         this.userService = userService;   
         this.userServiceHashmap = userServiceHashmap;    
@@ -31,7 +31,7 @@ public class UserController   {
         userServiceHashmap.addMap(1, new User(3,"tangananica","tanganana"));
     }   */
     
-    
+    // para mostrar a usuario o que usario interactue
     @GetMapping("/user")
     public User getUser(){
         return userService.getUser(0);
@@ -53,9 +53,11 @@ public class UserController   {
     }
 
     //localhost:8080/FindUser/1
-    @GetMapping("/FindUser/{id}")
+    @GetMapping("/FindUser/{id}")//java es el medio webeo pero s
     public User findUser(@PathVariable("id") int id){
         return userService.getUser(id);
+
+    //mysql.jc.jbdc.localhost:8080/mydb/root/admin
     }
 
     @GetMapping("/addUser/{id}/{nombre}/{apellido}")
