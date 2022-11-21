@@ -1,6 +1,7 @@
 {
-    "doki.background.path": "D:\\Descargas\\403996.jpg",
+    "doki.background.path": "",
     "doki.statusbar.name": "Link Wallpaper",
     "doki.wallpaper.path": "D:\\Descargas\\403996.jpg",
-    "cSpell.language": "es-ES,en"
+    "cSpell.language": "es-ES,en",
+    "java.compile.nullAnalysis.mode": "automatic"
 }

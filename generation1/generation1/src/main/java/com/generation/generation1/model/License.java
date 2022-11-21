@@ -33,7 +33,10 @@ public class License {
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name ="user_id")
     private User user;
-
+    //cuando tenemos una relacion de oneToOne el lazy envia y el eager recive
+    /* @OneToOne
+    @JoinColumn(name="license_id")
+    private User user; */
     
 
 

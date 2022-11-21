@@ -12,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
+import javax.swing.text.html.HTMLEditorKit.LinkController;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
@@ -37,7 +38,9 @@ public class User {
     @JsonBackReference
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private License license;
-
+    
+    /* @OneToOne(mappedBy = "user")
+    License license; */
   
 
     //relacion one to many
