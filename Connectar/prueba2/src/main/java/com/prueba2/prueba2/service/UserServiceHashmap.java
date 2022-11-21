@@ -14,5 +14,5 @@ public interface UserServiceHashmap {
     //tamañó  
     int sizeMap();
     //posicion
-    User getOneUser(String position);
+    User getOneUser(Integer position); 
 }

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Generation1Application<generation1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.generation.generation1.Generation1Application",
+            "projectName": "generation1",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

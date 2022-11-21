@@ -11,7 +11,7 @@ import com.prueba2.prueba2.model.User;
 @Service
 public class UserServiceMap implements UserServiceHashmap {
     private Map<Integer, User> userMap = new HashMap<>();
-
+                //KEY ,  VALUE
     public UserServiceMap(){
 
     }
@@ -27,8 +27,9 @@ public class UserServiceMap implements UserServiceHashmap {
     }
 
     @Override
-    public void removeMap(int num) {
-        userMap.remove(num);
+    public void removeMap(int num) {   // KEY = CUALQUIER VALOR , VALUE = CUALQUIER VALOR
+        userMap.remove(num);           // KEY = INT = NUM
+        
     }
 
     @Override
@@ -37,7 +38,7 @@ public class UserServiceMap implements UserServiceHashmap {
     }
 
     @Override
-    public User getOneUser(String position) {
+    public  User getOneUser(Integer position) {
         return userMap.get(position);
     }
 

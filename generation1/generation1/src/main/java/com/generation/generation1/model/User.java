@@ -1,9 +1,21 @@
 package com.generation.generation1.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import net.bytebuddy.dynamic.TypeResolutionStrategy.Lazy;
 
 @Entity(name = "User")
 public class User {
@@ -14,10 +26,28 @@ public class User {
     // definir atributo id
     public int id;
     private String name;
-    @Column(name = "last_name")
+    @Column(name = "last_name")//cambia el nombre del dato para la columna
     private String lastName;
+    @Column(unique = true)// que el dato de abajo sea unico
     private String email;
 
+
+    //relacion uno a uno
+    //relacion uno a uno con la tabla licencia
+    @JsonBackReference
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private License license;
+
+  
+
+    //relacion one to many
+    //cuando se envia de uno a uno es lazy y de uno a mucho es eager
+    //JsonBackReference cuando se envia el dato
+
+    @JsonBackReference
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    private List<BuySell> BuySell;
+    
     public User() {
     }
 

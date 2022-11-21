@@ -23,6 +23,7 @@ public class UserController   {
         userService.add(new User(1,"Frederick","cid"));
         userService.add(new User(2,"Manito","Juja"));
         userServiceHashmap.addMap(1, new User(3,"tangananica","tanganana"));
+        userServiceHashmap.addMap(2, new User(4,"asdfadsf","tanganana"));
         
     } 
 
@@ -47,9 +48,9 @@ public class UserController   {
     public Map<Integer, User> getAllMap() {
         return userServiceHashmap.getAllMap();
     }
-    @GetMapping("/HashMapUno")
-    public User Posicion(int position) {
-        return userServiceHashmap.getOneUser("1");
+    @GetMapping("/HashMapUno/{num}")
+    public User Posicion(@PathVariable("num")Integer num) {
+        return userServiceHashmap.getOneUser(num);
     }
 
     //localhost:8080/FindUser/1

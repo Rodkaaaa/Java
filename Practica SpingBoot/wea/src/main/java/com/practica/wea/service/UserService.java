@@ -1,15 +1,11 @@
-package com.generation.generation1.service;
+package com.practica.wea.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import com.generation.generation1.model.User;
+import com.practica.wea.model.User;
 
-
-public interface UserService{
-
-
-    
+public interface UserService {
+    //el esqueleto de la funcion
     List  < User > getAllUser();
 
     User getUser(Integer id);
@@ -19,5 +15,4 @@ public interface UserService{
     void delete(Integer id);
 
     //int count();
-
 }

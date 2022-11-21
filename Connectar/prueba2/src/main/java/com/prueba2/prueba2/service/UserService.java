@@ -7,7 +7,7 @@ import com.prueba2.prueba2.model.User;
 //funciones sin fincionalidad
 public interface UserService {
     // esta funcion traera Todos los usuarios que tenga
-    List<User> getAll();
+    List<User> getAll();// 
 
     //esta funcion agregar usuarios
     void add(User user);
