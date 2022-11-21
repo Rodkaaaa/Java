@@ -41,6 +41,7 @@ public class BuySellController {
     public void deleteBuySell(@PathVariable("id") Integer id){
         buySellService.deleteBuySell(id);
     }
+    //asd
 }
 //CRUD
 //c = create
