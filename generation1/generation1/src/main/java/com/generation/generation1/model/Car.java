@@ -40,11 +40,11 @@ public class Car {
     private List<CarSell> carSell;
 
 
-
     public Car() {
     }
-    
-    public Car(Integer id, String marca, String modelo, String color, int anio, int valor) {
+
+
+    public Car(Integer id, String marca, String modelo, String color, int anio, @Range(min = 0) int valor) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
@@ -52,54 +52,79 @@ public class Car {
         this.anio = anio;
         this.valor = valor;
     }
+
 
     public Integer getId() {
         return id;
     }
 
+
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     public String getMarca() {
         return marca;
     }
 
+
     public void setMarca(String marca) {
         this.marca = marca;
     }
+
 
     public String getModelo() {
         return modelo;
     }
 
+
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+
 
     public String getColor() {
         return color;
     }
 
+
     public void setColor(String color) {
         this.color = color;
     }
+
 
     public int getAnio() {
         return anio;
     }
 
+
     public void setAnio(int anio) {
         this.anio = anio;
     }
 
+
     public int getValor() {
         return valor;
     }
-    
+
+
     public void setValor(int valor) {
         this.valor = valor;
     }
+
+
+    public List<CarSell> getCarSell() {
+        return carSell;
+    }
+
+
+    public void setCarSell(List<CarSell> carSell) {
+        this.carSell = carSell;
+    }
+
+
+    
 
 
     

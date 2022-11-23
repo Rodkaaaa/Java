@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import com.generation.generation1.model.Car;
 import com.generation.generation1.service.CarService;
 
-@Controller
+@RestController
 @CrossOrigin("*")
 public class CarController {
 

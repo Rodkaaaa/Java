@@ -31,27 +31,36 @@ public class BuySell {
     private Date fechaCompra;
 
     //recepcionando referencia one to many
-    @JsonManagedReference
+    /* @JsonManagedReference
     @ManyToOne(fetch = FetchType.LAZY)// cuando se recive una relacion many to one es lazy
     @JoinColumn(name = "user_id")
     private User user;
+ */
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    //recepcionar One to many (many to one)
+ 
+    //cuando se recibe una relacion many to one el fetch type es con LAZY
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="user_id")
+    private User user;
+
+    //many to many de auto
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-        name = "carSell",//nombre tabla relacional
-        joinColumns = @JoinColumn(name="buySell_id"),//nombre de la columna de mi tabla
-        inverseJoinColumns = @JoinColumn(name= "car_id")// nombre de la clumna de la otra tabla
+        name="carSell",
+        joinColumns = @JoinColumn(name="buySell_id"),
+        inverseJoinColumns = @JoinColumn(name="car_id")
     )
-    private List<Car> car;
+    private List <CarSell>  carSells;
 
-
-    
     public BuySell() {
     }
-    public BuySell(Integer id, @Range(min = 0) int monto, Date fechaCompra) {
+
+    public BuySell(Integer id, @Range(min = 0) int monto, Date fechaCompra, User user) {
         this.id = id;
         this.monto = monto;
         this.fechaCompra = fechaCompra;
+        this.user = user;
     }
 
     public Integer getId() {
@@ -78,6 +87,15 @@ public class BuySell {
         this.fechaCompra = fechaCompra;
     }
 
-    
+    public User getUser() {
+        return user;
+    }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+
+
+    
 }

@@ -4,15 +4,21 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.generation.generation1.model.License;
 import com.generation.generation1.service.LicenseService;
 
 
 
-@Controller
+@RestController
 @CrossOrigin("*")                    
 public class LicenseController {
 
@@ -43,17 +49,17 @@ public class LicenseController {
     }
 
     @GetMapping("/License/clase/{clase}")
-    public List<License> licensiaPorClase(@PathVariable("clase") String clase){
-        return licenseService.licensiaPorClase(clase);
+    public List<License> licenciaPorClase(@PathVariable("clase") String clase){
+        return licenseService.licenciaPorClase(clase);
     }
 
     @GetMapping("/License/clase/{estado}")
     public List<License> findEstado(@PathVariable("estado") String estado){
-        return licenseService.licensiaPorStado(estado);
+        return licenseService.licenciaPorStado(estado);
     }
 
     @GetMapping("/License/claseUsuario/")
-    public List<License> licensiaUser(){
-        return licenseService.licensiaUser();
+    public List<License> licenciaUser(){
+        return licenseService.licenciaUser();
     } 
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
 import org.springframework.stereotype.Service;
 
 import com.generation.generation1.model.User;
@@ -40,11 +41,9 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public List <User> getAllUser() {
-    /* for (User user : userRepository.findAll()) {
+     /* for (User user : userRepository.findAll()) {
             userlist.add(user);
        } */
-        return (List<User>) userRepository.findAll();
+        return (List<User>)userRepository.findAll(); 
     }
-
-    
 }

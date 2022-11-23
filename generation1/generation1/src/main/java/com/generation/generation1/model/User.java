@@ -35,8 +35,7 @@ public class User {
 
     //relacion uno a uno
     //relacion uno a uno con la tabla licencia
-    @JsonBackReference
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "user")
     private License license;
     
     /* @OneToOne(mappedBy = "user")
@@ -47,7 +46,6 @@ public class User {
     //cuando se envia de uno a uno es lazy y de uno a mucho es eager
     //JsonBackReference cuando se envia el dato
 
-    @JsonBackReference
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<BuySell> BuySell;
     

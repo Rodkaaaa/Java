@@ -2,13 +2,14 @@ package com.generation.generation1.repository;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.support.CrudMethodMetadata;
 import org.springframework.data.repository.CrudRepository;
 
 import com.generation.generation1.model.Car;
 
-public interface CarRepository extends CrudRepository<Car, Integer> /* Puede ser JpaRepository */ {
+public interface CarRepository extends JpaRepository<Car, Integer> /* Puede ser JpaRepository */ {
     //aca es para hacer querys 
     //funcion query para buscar autos por marca
     //native queri le decimos a java que estamos usando otro lenguaje y que no es necesario que lo interprete

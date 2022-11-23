@@ -18,21 +18,23 @@ public class CarSell {
 
     //many to one a auto
     // al ser una relacion de tabal relacional tan o se llama el json
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "car_id")
     private Car car;
 
     //many to one buysell
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "buySell_id")
     private BuySell buySell;
 
     public CarSell() {
     }
 
-    public CarSell(Integer id, int cantidad) {
+    public CarSell(Integer id, int cantidad, Car car, BuySell buySell) {
         this.id = id;
         this.cantidad = cantidad;
+        this.car = car;
+        this.buySell = buySell;
     }
 
     public Integer getId() {
@@ -51,6 +53,23 @@ public class CarSell {
         this.cantidad = cantidad;
     }
 
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public BuySell getBuySell() {
+        return buySell;
+    }
+
+    public void setBuySell(BuySell buySell) {
+        this.buySell = buySell;
+    }
+
+    
     
     
 }

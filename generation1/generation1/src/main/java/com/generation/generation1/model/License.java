@@ -29,26 +29,25 @@ public class License {
 
     // recepcion de la relaciopn one to one
     //JsonManagedReference cuando se recibe la referencia
-    @JsonBackReference
-    @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name ="user_id")
+    @OneToOne()
+    //se crea la columna con la FK
+    @JoinColumn(name="user_id")
     private User user;
     //cuando tenemos una relacion de oneToOne el lazy envia y el eager recive
     /* @OneToOne
     @JoinColumn(name="license_id")
     private User user; */
-    
-
 
     public License() {
     }
 
-    public License(Integer id, int numero, Date fechaVencimiento, String clase, String estado) {
+    public License(Integer id, int numero, Date fechaVencimiento, String clase, String estado, User user) {
         this.id = id;
         this.numero = numero;
         this.fechaVencimiento = fechaVencimiento;
         this.clase = clase;
         this.estado = estado;
+        this.user = user;
     }
 
     public Integer getId() {
@@ -90,6 +89,17 @@ public class License {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+    
+    
+
 
 
     
